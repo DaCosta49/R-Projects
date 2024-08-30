@@ -1,0 +1,10 @@
+D <- 30000
+
+# Probability of survival for ages 40 to 49
+prob_survival <- c(0.99, 0.98, 0.97, 0.97, 0.96, 0.95, 0.94, 0.93, 0.92, 0.91)
+
+# Interest rates for the next 10 years
+interest_rates <- c(0.01, 0.0125, 0.015, 0.0175, 0.02, 0.021, 0.025, 0.028, 0.029, 0.03)
+
+# Calculate present value
+PV <- D * sum(prob_survival / (1 + interest_rates)^seq(1, 10))
